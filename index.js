@@ -1,12 +1,13 @@
-function countSheeps (sheep) {
-  let count = 0
-  for (let sheepIndex = 0; sheepIndex < sheep.length; sheepIndex++) {
-    const isSheepPresent = sheep[sheepIndex]
-    if (isSheepPresent) {
-      count++
+function countSheeps (sheeps) {
+  let count = 0;
+
+  for (const sheepIsPresent of sheeps) {
+    if (sheepIsPresent) {
+      count++;
     }
   }
-  return count
+
+  return count;
 }
 
 console.log(countSheeps([
@@ -16,4 +17,4 @@ console.log(countSheeps([
   true, false, false, true,
   true, true, true, true,
   false, false, true, true
-]))
+]));
